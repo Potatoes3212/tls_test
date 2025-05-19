@@ -13,5 +13,6 @@ services:
     volumes:
       - ./nginx_conf/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx_conf/configs:/etc/nginx/conf.d:ro
+      - /etc/letsencrypt/live/truepotatoes.ru:/etc/nginx/certs  # Путь к сертификатам
     depends_on: 
       - tls_test
